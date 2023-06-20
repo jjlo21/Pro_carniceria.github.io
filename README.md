@@ -1,4 +1,4 @@
-# Pro_carniceria
+# Proyecto_carniceria
 #PROMEDIO DE VENTAS CARNICERIA
 ***
  En su labor como programador de software ha sido elegido para el desarrollo de una aplicación que necesita un administrador de una carniceria, que desea calcular el promedio de ventas diarias de su negocio. Como información básica de cada cliente se debe registrar el numero de identificación, su nombre y la compra realizada.
