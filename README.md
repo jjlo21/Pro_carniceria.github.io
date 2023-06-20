@@ -22,43 +22,54 @@
 **Propósito:** Guardar identificación, nombre, compra
 \
 **Curso Normal de Eventos:**
-1. El Ferretero ingresa la cantidad de productos a evaluar.
-2. El Ferretero ingresa la identificación, nombre, curso, y el valor del producto.
+1. El administrador de la carniceria ingresa la cantidad de clientes.
+2. El administrador de la carniceria ingresa la identificación, nombre, valor de la compra.
 3. Se calcula el promedio a partir de:
-( Σ(Precio del producto 1, Precio del producto 2, Precio del producto 3, Precio del producto n) / Total ventas) / Cantidad productos
-4. Se Muestra el promedio de las ventas obtenidas
-Postcondiciones: Promedio de ventas 
-![](https://github.com/Deison12/Taller1.github.io/blob/f6ab787bf3e6a6cad4f5ac1c25dde117bc776b9e/Diagrama%20en%20blanco.png)
+(Total ventas) / Cantidad clientes
+4. Se Muestra el promedio de las ventas obtenidas en el dia
+![](https://github.com/jjlo21/Pro_carniceria/blob/main/CASO%20DE%20USO.jpeg?raw=true)
 
 ***
 ##Aproximación Seudocódigo
 \
- Algoritmo Ferreteria
- 
-	Definir CantidadProductos Como Entero
-	Definir promedio como real
-	Escribir "INGRESE LA CANTIDAD DE PRODUCTOS A EVALUAR"
-	Leer CantidadProductos
-	Dimension  identificacion[CantidadProductos], nombres[CantidadProductos]
-	Dimension  precio[CantidadProductos]		
-	Para i=1 Hasta CantidadProductos Con Paso 1
-		Escribir "INGRESE LA IDENTIFICACION DEL PRODUCTO " ,i
-		Leer id
-		identificacion[i] = id
-		Escribir "INGRESE EL NOMBRE DEL PRODUCTO " ,i
-		Leer name
-		nombres[i] = mame
-		Escribir "INGRESE EL VALOR DE VENTA DEL PRODUCTO " ,i
-		Leer price
-		precio[i] = price
-	FinPara
-	Para i=1 hasta CantidadProductos con paso 1
-		promedio = promedio + precio[i] / CantidadProductos
-				
-	finPara
+Proceso Carniceria
+	Definir cantidad_clientes Como Entero
+	Definir promedio Como Entero
+	promedio=0
+	Definir identificacion_cli, venta Como Entero
+	Definir nombre Como Caracter
+	Definir i Como Entero
+	Definir id, ven Como Entero
+	Definir nom Como Caracter
 	
-	Imprimir "El promedio de ventas es: ",promedio	
-FinAlgoritmo
+	Escribir "Ingrese la cantidad de clientes"
+	Leer cantidad_clientes
+	
+	Dimension  identificacion_cli[60], nombre[50], venta[50]
+	
+	Para i=1 Hasta cantidad_clientes Con Paso 1 Hacer
+		Escribir "ingrese identiicacion del cliente", i
+		leer id
+		identificacion_cli[i]=id
+		
+		Escribir "ingrese nombre del cliente", i
+		leer nom
+		nombre[i]=nom
+		
+		Escribir "ingrese valor de compra del cliente", i
+		leer ven
+		venta[i]=ven
+	Fin Para
+	
+	Para i=1 Hasta cantidad_clientes Con Paso 1 Hacer
+		promedio=promedio+venta[i]
+	Fin Para
+	
+	promedio=promedio/cantidad_clientes
+	Escribir "Promedio de ventas del dia = ", promedio
+	
+FinProceso
+
 ***
 
 
