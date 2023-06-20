@@ -12,9 +12,11 @@
 \
 ![](https://github.com/jjlo21/Pro_carniceria/blob/main/2023-06-15%20(6).png?raw=true)
 
+***
+
 **Diagrama de flujo**
 \
-![]()
+![](https://github.com/jjlo21/Pro_carniceria/blob/main/2023-06-15%20(5).png?raw=true)
 
 ***
 ## CASO DE USO
