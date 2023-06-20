@@ -38,6 +38,7 @@
 ***
 ##Aproximación Seudocódigo
 \
+
 Proceso Carniceria
 	Definir cantidad_clientes Como Entero
 	Definir promedio Como Entero
@@ -78,4 +79,48 @@ FinProceso
 
 ***
 
+##Codigo java 
+\
+
+import java.util.Scanner;
+public class por_carniceria
+{
+    
+    
+    public static void main(String args[]){
+        Scanner leer = new Scanner(System.in);
+        int cantidad_clientes;
+        int i;
+        int id;
+        int identificacion_cli[];
+        String nom;
+        String nombre[];
+        int promedio;
+        int ven;
+        int venta[];
+        promedio = 0;
+        System.out.println("Ingrese la cantidad de clientes");
+        cantidad_clientes = leer.nextInt();
+        identificacion_cli = new int[60];
+        nombre = new String[50];
+        venta = new int[50];
+        for (i=1;i<=cantidad_clientes;i++) {
+            System.out.println("ingrese identiicacion del cliente "+i);
+            id = leer.nextInt();
+            identificacion_cli[i] = id;
+            System.out.println("ingrese nombre del cliente "+i);
+            nom = leer.next();
+            nombre[i] = nom;
+            System.out.println("ingrese valor de compra del cliente "+i);
+            ven = leer.nextInt();
+            venta[i] = ven;
+        }
+        for (i=1;i<=cantidad_clientes;i++) {
+            promedio = promedio+venta[i];
+        }
+        promedio = promedio/cantidad_clientes;
+        System.out.println("Promedio de ventas del dia = "+promedio);
+    }
+
+}
 
